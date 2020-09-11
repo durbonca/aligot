@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="menuCarta.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Carta Aligot</title>
+</head>
+
+<body>
+    <div id="app" class="container-fluid offset-md-3 col-md-6 mt-5 px-4">
+
+        <div class="row px-5 my-3">
+            <img class="col-12  mt-5 w-100" src="assets/logo.png" alt="">
+        </div>
+
+        <div class="express">
+            <div class="row">
+                <div class="col-12" style="border-bottom: solid 2px white;">
+                    <h1 class="text-center">Menu Express</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-center">Lechuga con Nueces</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-3 dotted d-flex align-content-center px-0" style="writing-mode: vertical-rl; text-orientation: upright;">
+                    <p>A ELECCIÓN</p>
+                </div>
+                <div class="col-9 dotted d-flex flex-column justify-content-around text-center" style="font-size:1.5em;">
+                    <p>FILETE Rôti</p>
+                    <p>BOEUF Bourguignon</p>
+                    <p>MAGRET de Canard</p>
+                    <p>REINETA “Meunière”</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center">ALIGOT o Ratatouille</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-7 dotted text-center">
+                    <h2 class="text-center">Café Espresso</h2>
+                </div>
+                <div class="col-5 d-flex align-content-center" style="border-top: 2px solid white;">
+                    <h5 class="text-center">$ 13.000</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 px-5" style="font-family: 'Dancing Script', cursive; font-size: larger;">
+            <p class="col-12">El Aligot es un plato originario de Aubrac, Francia. Se trata de un puré de papas mezclado con el queso fresco francés “Tomme fraîche”.</p>
+            <p class="col-12">Para prepararlo, la mezcla de ambos ingredientes se calienta a fuego lento, removiendo enérgicamente hasta que el queso se derrite, y el plato quede con una textura espesa y suave.</p>
+            <p class="col-12">Esta receta tiene un origen humilde; se solía preparar por los monjes de Aubrac, quienes ofrecían algo de comer a los peregrinos que seguían el camino hacia Compostela. En un principio fue elaborado con migas de pan, ingrediente que en el
+                siglo XIX fue reemplazado por la papa.</p>
+        </div>
+
+        <h1 class="text-center mt-5">A La Carta</h1>
+
+        <h2 class="text-center my-5">Para Compartir</h2>
+
+        <div v-for="product in compartir" class="row d-flex mt-3 item">
+            <h5 class="col-8">{{product.name}}</h5>
+            <h6 class="col-4 text-right">{{product.price}}</h6>
+            <span class="col-12">{{product.description}}</span>
+        </div>
+
+        <h2 class="text-center my-5">PLATOS</h2>
+
+        <div v-for="product in platos" class="row d-flex mt-3 item">
+            <h5 class="col-8">{{product.name}}</h5>
+            <h6 class="col-4 text-right">{{product.price}}</h6>
+            <span class="col-12">{{product.description}}</span>
+        </div>
+
+        <h2 class="text-center my-5">PARA ACOMPAÑAR</h2>
+
+        <div v-for="product in acompañar" class="row d-flex mt-3 item">
+            <h5 class="col-8">{{product.name}}</h5>
+            <h6 class="col-4 text-right">{{product.price}}</h6>
+            <span class="col-12">{{product.description}}</span>
+        </div>
+
+        <div class="text-center col-8 offset-2 row d-flex flex-column mt-5 callToAction">
+            <h2>copa de vino</h2>
+            <h1>aligot</h1>
+            <h3>$2.500</h3>
+        </div>
+
+        <h2 class="text-center mt-5">CERVEZAS</h2>
+        <h3 class="text-center fontYellow">BARRIL</h3>
+        <div class="row">
+            <div class="text-right px-0 offset-8 col-2">
+                <p class="font-weight-bold my-0">Caña</p>
+                <p>20cl</p>
+            </div>
+            <div class="text-right px-0 col-2">
+                <p class="font-weight-bold my-0">Shop</p>
+                <p>40cl</p>
+            </div>
+        </div>
+
+        <div v-for="product in cervezaBarril" class="row d-flex mt-3 item">
+            <h5 class="col-8">{{product.name}}</h5>
+            <h6 class="col-2 text-right">{{product.price}}</h6>
+            <h6 class="col-2 text-right">{{product.price2}}</h6>
+            <span class="col-12">{{product.description}}</span>
+        </div>
+
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="menuCarta.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>
