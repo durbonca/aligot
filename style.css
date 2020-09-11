@@ -38,8 +38,9 @@ ul {
 header {
     min-height: 100vh;
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #191513), /* url("assets/main.jpg") */
-    url(assets/portada.jpg) no-repeat center center;
-    background-size: cover;
+    <<<<<<< HEAD url(assets/portada.jpg) no-repeat center center;
+    =======url(https://www.alazard-roux.fr/Files/127992/Img/04/shutterstock-558541438.jpg) no-repeat center center;
+    >>>>>>>487ab4e98ad35ab2b78e83ea40d7df15be001d79 background-size: cover;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
